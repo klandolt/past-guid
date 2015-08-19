@@ -30,6 +30,7 @@
         {
             this.getnewGuid = new System.Windows.Forms.Button();
             this.guidTextBox = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // getnewGuid
@@ -52,11 +53,22 @@
             this.guidTextBox.Text = "Push the Button for new GUID";
             this.guidTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 158);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "TEST TEXT";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 146);
+            this.ClientSize = new System.Drawing.Size(358, 198);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.guidTextBox);
             this.Controls.Add(this.getnewGuid);
             this.Name = "Form1";
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.Button getnewGuid;
         private System.Windows.Forms.TextBox guidTextBox;
+        private System.Windows.Forms.Label label1;
     }
 }
 
