@@ -12,7 +12,7 @@ namespace NewGuid
 {
     public partial class Form1 : Form
     {
-        KeyboardHook hook = new KeyboardHook();
+        
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool RegisterHotKey(IntPtr hWnd, int id, int fsModifiers, int vk);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -32,7 +32,7 @@ namespace NewGuid
             InitializeComponent();
 
             int id = 0;     // The id of the hotkey. 
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Shift, Keys.A.GetHashCode());  
+            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.G.GetHashCode());  
 
            
 
@@ -52,14 +52,10 @@ namespace NewGuid
 
             guidTextBox.Text = g.ToString();
             System.Windows.Forms.Clipboard.SetText(g.ToString());
-        }
-
-        void hook_KeyPressed(object sender, KeyPressedEventArgs e)
-        {
-            // show the keys pressed in a label.
-            label1.Text = e.Modifier.ToString() + " + " + e.Key.ToString();
             
         }
+
+       
         protected override void WndProc(ref Message m)
         {
             base.WndProc(ref m);
@@ -73,11 +69,24 @@ namespace NewGuid
                 KeyModifier modifier = (KeyModifier)((int)m.LParam & 0xFFFF);       // The modifier of the hotkey that was pressed.
                 int id = m.WParam.ToInt32();                                        // The id of the hotkey that was pressed.
 
-
-                MessageBox.Show("Hotkey has been pressed!");
+                if(id == 0 )
+                {
+                    getNewGuid();
+                    SendKeys.Send("^{v}");
+                }
+                
+               
                 // do something
             }
         }
+       
+
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            base.OnFormClosing(e);
+            // Code
+            UnregisterHotKey(this.Handle, 0);   
+        } 
 
     }
 }

@@ -35,6 +35,7 @@
             // 
             // getnewGuid
             // 
+            this.getnewGuid.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.getnewGuid.Location = new System.Drawing.Point(6, 18);
             this.getnewGuid.Name = "getnewGuid";
             this.getnewGuid.Size = new System.Drawing.Size(340, 70);
@@ -46,9 +47,9 @@
             // guidTextBox
             // 
             this.guidTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guidTextBox.Location = new System.Drawing.Point(8, 108);
+            this.guidTextBox.Location = new System.Drawing.Point(6, 153);
             this.guidTextBox.Name = "guidTextBox";
-            this.guidTextBox.Size = new System.Drawing.Size(338, 26);
+            this.guidTextBox.Size = new System.Drawing.Size(340, 26);
             this.guidTextBox.TabIndex = 1;
             this.guidTextBox.Text = "Push the Button for new GUID";
             this.guidTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -56,18 +57,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 158);
+            this.label1.Location = new System.Drawing.Point(3, 109);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 13);
+            this.label1.Size = new System.Drawing.Size(451, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "TEST TEXT";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Text = "Über den Button oder CTRL + G wird eine GUID erzeugt und in der Zwischenablage ab" +
+    "gelegt!";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 198);
+            this.ClientSize = new System.Drawing.Size(358, 201);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guidTextBox);
             this.Controls.Add(this.getnewGuid);
