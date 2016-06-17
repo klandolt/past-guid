@@ -12,7 +12,7 @@ ___
 
 - Für Fragen und informationen stehe ich gerne zur Verfügung.
 - For any questions and information. I am happy to help.
-
+---
 ## Screenshot
 ![screenshot past GUID by klandolt][screenshot1]
 
