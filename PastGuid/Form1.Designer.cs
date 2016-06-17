@@ -1,6 +1,6 @@
 ﻿namespace NewGuid
 {
-    partial class Form1
+    partial class PastGuid
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,22 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.getnewGuid = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PastGuid));
+            this.getnewGuidButton = new System.Windows.Forms.Button();
             this.guidTextBox = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.infoLabel = new System.Windows.Forms.Label();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.statusBarLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // getnewGuid
+            // getnewGuidButton
             // 
-            this.getnewGuid.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.getnewGuid.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.getnewGuid.Location = new System.Drawing.Point(12, 12);
-            this.getnewGuid.Name = "getnewGuid";
-            this.getnewGuid.Size = new System.Drawing.Size(340, 70);
-            this.getnewGuid.TabIndex = 0;
-            this.getnewGuid.Text = "Get New Guid";
-            this.getnewGuid.UseVisualStyleBackColor = true;
-            this.getnewGuid.Click += new System.EventHandler(this.getnewGuid_Click);
+            this.getnewGuidButton.AutoSize = true;
+            this.getnewGuidButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.getnewGuidButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getnewGuidButton.Location = new System.Drawing.Point(12, 12);
+            this.getnewGuidButton.Name = "getnewGuidButton";
+            this.getnewGuidButton.Size = new System.Drawing.Size(340, 70);
+            this.getnewGuidButton.TabIndex = 0;
+            this.getnewGuidButton.Text = "Get New Guid";
+            this.getnewGuidButton.UseVisualStyleBackColor = true;
+            this.getnewGuidButton.Click += new System.EventHandler(this.getnewGuid_Click);
             // 
             // guidTextBox
             // 
@@ -55,27 +60,53 @@
             this.guidTextBox.Text = "Push the Button for new GUID";
             this.guidTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label1
+            // infoLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(5, 93);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(351, 26);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Über den Button oder die Tastenkombination (CTRL + G) wird eine GUID\r\nerzeugt und" +
+            this.infoLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.infoLabel.AutoSize = true;
+            this.infoLabel.Location = new System.Drawing.Point(5, 93);
+            this.infoLabel.Name = "infoLabel";
+            this.infoLabel.Size = new System.Drawing.Size(351, 26);
+            this.infoLabel.TabIndex = 2;
+            this.infoLabel.Text = "Über den Button oder die Tastenkombination (CTRL + G) wird eine GUID\r\nerzeugt und" +
     " in der Zwischenablage abgelegt bzw. ausgegeben!";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Form1
+            // statusStrip1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(363, 169);
-            this.Controls.Add(this.label1);
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.statusBarLabel});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 171);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(363, 22);
+            this.statusStrip1.TabIndex = 3;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // statusBarLabel
+            // 
+            this.statusBarLabel.Name = "statusBarLabel";
+            this.statusBarLabel.Size = new System.Drawing.Size(297, 17);
+            this.statusBarLabel.Text = "SourceCode on https://github.com/klandolt/past-guid";
+            // 
+            // PastGuid
+            // 
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.ClientSize = new System.Drawing.Size(363, 193);
+            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.guidTextBox);
-            this.Controls.Add(this.getnewGuid);
-            this.Name = "Form1";
-            this.Text = "Past Guid";
+            this.Controls.Add(this.getnewGuidButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "PastGuid";
+            this.Text = "Past Guid by klandolt";
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -83,9 +114,11 @@
 
         #endregion
 
-        private System.Windows.Forms.Button getnewGuid;
+        private System.Windows.Forms.Button getnewGuidButton;
         private System.Windows.Forms.TextBox guidTextBox;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label infoLabel;
+        private System.Windows.Forms.ToolStripStatusLabel statusBarLabel;
+        private System.Windows.Forms.StatusStrip statusStrip1;
     }
 }
 

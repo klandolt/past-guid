@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Windows.Forms;
+
+
 // ReSharper disable UnusedMember.Local
 // ReSharper disable UnusedVariable
 
 namespace NewGuid
 {
-    public partial class Form1 : Form
+    public partial class PastGuid : Form
     {
         
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -25,7 +27,7 @@ namespace NewGuid
             WinKey = 8
         }
 
-        public Form1()
+        public PastGuid()
         {
             InitializeComponent();
 
@@ -49,7 +51,8 @@ namespace NewGuid
 
             guidTextBox.Text = g.ToString();
             Clipboard.SetText(g.ToString());
-            
+            statusBarLabel.Text = @"Update Guid: " + DateTime.Now.ToString("dd.mm.yyyy HH:mm:ss.FFF");
+
         }
 
        
