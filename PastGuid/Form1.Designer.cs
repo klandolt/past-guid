@@ -36,7 +36,8 @@
             // getnewGuid
             // 
             this.getnewGuid.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.getnewGuid.Location = new System.Drawing.Point(6, 18);
+            this.getnewGuid.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.getnewGuid.Location = new System.Drawing.Point(12, 12);
             this.getnewGuid.Name = "getnewGuid";
             this.getnewGuid.Size = new System.Drawing.Size(340, 70);
             this.getnewGuid.TabIndex = 0;
@@ -47,7 +48,7 @@
             // guidTextBox
             // 
             this.guidTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guidTextBox.Location = new System.Drawing.Point(6, 153);
+            this.guidTextBox.Location = new System.Drawing.Point(12, 130);
             this.guidTextBox.Name = "guidTextBox";
             this.guidTextBox.Size = new System.Drawing.Size(340, 26);
             this.guidTextBox.TabIndex = 1;
@@ -57,24 +58,24 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 109);
+            this.label1.Location = new System.Drawing.Point(5, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(451, 13);
+            this.label1.Size = new System.Drawing.Size(351, 26);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Über den Button oder CTRL + G wird eine GUID erzeugt und in der Zwischenablage ab" +
-    "gelegt!";
+            this.label1.Text = "Über den Button oder die Tastenkombination (CTRL + G) wird eine GUID\r\nerzeugt und" +
+    " in der Zwischenablage abgelegt bzw. ausgegeben!";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(358, 201);
+            this.ClientSize = new System.Drawing.Size(363, 169);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.guidTextBox);
             this.Controls.Add(this.getnewGuid);
             this.Name = "Form1";
-            this.Text = "New Guid";
+            this.Text = "Past Guid";
             this.ResumeLayout(false);
             this.PerformLayout();
 

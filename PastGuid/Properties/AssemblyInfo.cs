@@ -1,16 +1,15 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 // Allgemeine Informationen über eine Assembly werden über die folgenden 
 // Attribute gesteuert. Ändern Sie diese Attributwerte, um die Informationen zu ändern,
 // die mit einer Assembly verknüpft sind.
-[assembly: AssemblyTitle("NewGuid")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("PastGuid")]
+[assembly: AssemblyDescription("Erzeugt und schreibt GUIDs überallhin // create und past GUIDs everywhere")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("geocentrale")]
-[assembly: AssemblyProduct("NewGuid")]
-[assembly: AssemblyCopyright("Copyright © geocentrale 2015")]
+[assembly: AssemblyCompany("klandolt")]
+[assembly: AssemblyProduct("PastGuid")]
+[assembly: AssemblyCopyright("Copyright ©klandolt 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

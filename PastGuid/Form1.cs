@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+// ReSharper disable UnusedMember.Local
+// ReSharper disable UnusedVariable
 
 namespace NewGuid
 {
@@ -18,6 +13,9 @@ namespace NewGuid
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         private static extern bool UnregisterHotKey(IntPtr hWnd, int id);
 
+        /// <summary>
+        /// Enum von möglichen Keys
+        /// </summary>
         enum KeyModifier
         {
             None = 0,
@@ -32,7 +30,7 @@ namespace NewGuid
             InitializeComponent();
 
             int id = 0;     // The id of the hotkey. 
-            RegisterHotKey(this.Handle, id, (int)KeyModifier.Control, Keys.G.GetHashCode());  
+            RegisterHotKey(Handle, id, (int)KeyModifier.Control, Keys.G.GetHashCode());  
 
            
 
@@ -40,18 +38,17 @@ namespace NewGuid
 
         private void getnewGuid_Click(object sender, EventArgs e)
         {
-            getNewGuid();
+            GetNewGuid();
         }
 
 
-        private void getNewGuid()
+        private void GetNewGuid()
         {
-            Guid g;
             // Create and display the value of two GUIDs.
-            g = Guid.NewGuid();
+            var g = Guid.NewGuid();
 
             guidTextBox.Text = g.ToString();
-            System.Windows.Forms.Clipboard.SetText(g.ToString());
+            Clipboard.SetText(g.ToString());
             
         }
 
@@ -71,12 +68,10 @@ namespace NewGuid
 
                 if(id == 0 )
                 {
-                    getNewGuid();
+                    GetNewGuid();
                     SendKeys.Send("^{v}");
                 }
-                
-               
-                // do something
+
             }
         }
        
@@ -84,8 +79,7 @@ namespace NewGuid
         protected override void OnFormClosing(FormClosingEventArgs e)
         {
             base.OnFormClosing(e);
-            // Code
-            UnregisterHotKey(this.Handle, 0);   
+            UnregisterHotKey(Handle, 0);   
         } 
 
     }
