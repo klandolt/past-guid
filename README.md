@@ -12,3 +12,8 @@ ___
 
 - Für Fragen und informationen stehe ich gerne zur Verfügung.
 - For any questions and information. I am happy to help.
+- 
+## Screenshot
+![screenshot past GUID by klandolt][screenshot1]
+
+[screenshot1]: https://www.klandolt.ch/github/pastguid/PastGuid-klandolt.PNG "screenshot past GUID by klandolt"
