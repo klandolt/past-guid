@@ -34,6 +34,7 @@
             this.infoLabel = new System.Windows.Forms.Label();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.statusBarLabel = new System.Windows.Forms.ToolStripStatusLabel();
+            this.checkBoxSeparator = new System.Windows.Forms.CheckBox();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -78,7 +79,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusBarLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 171);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 196);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(363, 22);
             this.statusStrip1.TabIndex = 3;
@@ -90,11 +91,22 @@
             this.statusBarLabel.Size = new System.Drawing.Size(297, 17);
             this.statusBarLabel.Text = "SourceCode on https://github.com/klandolt/past-guid";
             // 
+            // checkBoxSeparator
+            // 
+            this.checkBoxSeparator.AutoSize = true;
+            this.checkBoxSeparator.Location = new System.Drawing.Point(13, 163);
+            this.checkBoxSeparator.Name = "checkBoxSeparator";
+            this.checkBoxSeparator.Size = new System.Drawing.Size(198, 17);
+            this.checkBoxSeparator.TabIndex = 4;
+            this.checkBoxSeparator.Text = "Keine Trennzeichen / No separators";
+            this.checkBoxSeparator.UseVisualStyleBackColor = true;
+            // 
             // PastGuid
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(363, 193);
+            this.ClientSize = new System.Drawing.Size(363, 218);
+            this.Controls.Add(this.checkBoxSeparator);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.infoLabel);
             this.Controls.Add(this.guidTextBox);
@@ -119,6 +131,7 @@
         private System.Windows.Forms.Label infoLabel;
         private System.Windows.Forms.ToolStripStatusLabel statusBarLabel;
         private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.CheckBox checkBoxSeparator;
     }
 }
 

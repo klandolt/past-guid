@@ -48,9 +48,13 @@ namespace NewGuid
         {
             // Create and display the value of two GUIDs.
             var g = Guid.NewGuid();
-
-            guidTextBox.Text = g.ToString();
-            Clipboard.SetText(g.ToString());
+            var sGuid = g.ToString();
+            if (checkBoxSeparator.Checked)
+            {
+                sGuid = sGuid.Replace("-", "");
+            }
+            guidTextBox.Text = sGuid;
+            Clipboard.SetText(sGuid);
             statusBarLabel.Text = @"Update Guid: " + DateTime.Now.ToString("dd.mm.yyyy HH:mm:ss.FFF");
 
         }
