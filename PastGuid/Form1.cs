@@ -47,14 +47,34 @@ namespace NewGuid
         private void GetNewGuid()
         {
             // Create and display the value of two GUIDs.
-            var g = Guid.NewGuid();
-            var sGuid = g.ToString();
+            var output = String.Empty;
+            for (int i = 0; i < numericUpDown1.Value; i++)
+            {
+                var g = Guid.NewGuid();
+                output = output + g.ToString();
+
+                // Zwischen trennzeichen einfügen
+                if (radioButtonNoGuidSeparator.Checked)
+                {
+                    //Kein Trennzeichen einfügen
+                }else if (radioButtonWhitespace.Checked)
+                {
+                    output = output + " ";
+                }
+                else if(radioButtonNewLine.Checked)
+                {
+                    output = output + Environment.NewLine;
+                }
+
+            }
+            
+
             if (checkBoxSeparator.Checked)
             {
-                sGuid = sGuid.Replace("-", "");
+                output = output.Replace("-", "");
             }
-            guidTextBox.Text = sGuid;
-            Clipboard.SetText(sGuid);
+            guidTextBox.Text = output;
+            Clipboard.SetText(output);
             statusBarLabel.Text = @"Update Guid: " + DateTime.Now.ToString("dd.mm.yyyy HH:mm:ss.FFF");
 
         }
