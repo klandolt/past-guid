@@ -19,4 +19,4 @@ Es ist eine kleine WinForm Applikation welche einen Hot-Key "CTRL + G" registrie
 
 ![screenshot past GUID by klandolt][screenshot1]
 
-[screenshot1]: https://www.klandolt.ch/github/pastguid/PastGuid-klandolt.PNG "screenshot past GUID by klandolt"
+[screenshot1]: https://www.klandolt.ch/github/pasteguid/PasteGuid-klandolt.PNG "screenshot past GUID by klandolt"
