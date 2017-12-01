@@ -96,8 +96,8 @@
             // statusBarLabel
             // 
             this.statusBarLabel.Name = "statusBarLabel";
-            this.statusBarLabel.Size = new System.Drawing.Size(297, 17);
-            this.statusBarLabel.Text = "SourceCode on https://github.com/klandolt/past-guid";
+            this.statusBarLabel.Size = new System.Drawing.Size(303, 17);
+            this.statusBarLabel.Text = "SourceCode on https://github.com/klandolt/paste-guid";
             // 
             // checkBoxSeparator
             // 
@@ -197,7 +197,7 @@
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "PastGuid";
-            this.Text = "Past Guid by klandolt";
+            this.Text = "Paste Guid by klandolt";
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
