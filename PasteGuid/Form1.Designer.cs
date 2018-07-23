@@ -41,6 +41,7 @@
             this.radioButtonNoGuidSeparator = new System.Windows.Forms.RadioButton();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.labelCount = new System.Windows.Forms.Label();
+            this.BtnFillExcel = new System.Windows.Forms.Button();
             this.statusStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
@@ -87,7 +88,7 @@
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.statusBarLabel});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 301);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 358);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(363, 22);
             this.statusStrip1.TabIndex = 3;
@@ -179,11 +180,22 @@
             this.labelCount.TabIndex = 7;
             this.labelCount.Text = "Anzahl Guid / Guid count";
             // 
+            // BtnFillExcel
+            // 
+            this.BtnFillExcel.Location = new System.Drawing.Point(12, 311);
+            this.BtnFillExcel.Name = "BtnFillExcel";
+            this.BtnFillExcel.Size = new System.Drawing.Size(339, 35);
+            this.BtnFillExcel.TabIndex = 8;
+            this.BtnFillExcel.Text = "Fill Excel-Cells with Guid";
+            this.BtnFillExcel.UseVisualStyleBackColor = true;
+            this.BtnFillExcel.Click += new System.EventHandler(this.BtnFillExcel_Click);
+            // 
             // PastGuid
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(363, 323);
+            this.ClientSize = new System.Drawing.Size(363, 380);
+            this.Controls.Add(this.BtnFillExcel);
             this.Controls.Add(this.labelCount);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.groupBox1);
@@ -222,6 +234,7 @@
         private System.Windows.Forms.RadioButton radioButtonNoGuidSeparator;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Button BtnFillExcel;
     }
 }
 
